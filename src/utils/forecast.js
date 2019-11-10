@@ -10,7 +10,7 @@ const forecast = ( {latitude, longitude}, callback ) => {
             callback(body.error, undefined)
         } else {
             callback(undefined,
-                'It is currently ' + body.currently.temperature + ' degrees out. There is ' + body.currently.precipProbability + '% chance of rain.'
+                'Actualmente hay ' + body.currently.temperature + ' grados afuera. Hay ' + body.currently.precipProbability + '% probabilidad de lluvia. La temperatura más alta de hoy es de ' + body.daily.data[0].temperatureHigh + ' grados y la más baja es de ' + body.daily.data[0].temperatureLow + ' grados. La humedad es de ' + body.daily.data[0].humidity + '.'
             )
         }
     })
